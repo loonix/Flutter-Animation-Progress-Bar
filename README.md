@@ -9,7 +9,6 @@ This colorful [Flutter](https://flutter.io) widget package aims to show an anima
 
 In order to use this package, do import
 ```dart
-import 'package:flutter_animation_progress_bar/flutter_animation_progress_bar.dart';
 ```
 
 Basic implementation can be done like below code:
