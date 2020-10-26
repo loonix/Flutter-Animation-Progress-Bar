@@ -1,44 +1,9 @@
-## Flutter Animation Progress Bar
+## BASED ON: Flutter Animation Progress Bar
 
 This colorful [Flutter](https://flutter.io) widget package aims to show an animation progress bar in reactive style. It also supports both vertical and horizontal bar.
 
 ![](flutter_animation_progress_bar.gif)
 
-
-### Flutter Create Contest
-This package is also a submission to Flutter Create contest. The basic rule of this contest is to measure the total Dart file size less or equal 5KB.
-
-After unzipping the compressed file, run following command to update dependencies:
-```
-flutter packages get
-```
-
-To evaluate the total size of all Dart files:
-```
-find . -name "*.dart" ! -name "*test*"  | xargs cat | wc -c
-```
-
-To evaluate only the package Dart code:
-```
-find . -name "*.dart" ! -name "*test*" ! -path "*example*"  | xargs cat | wc -c
-```
-
-To run simple example app with a total size of dart code less or equal 5KB:
-```
-cd example
-flutter clean
-flutter run
-```
-Hot restart app with "R" to replay the animation
-
-To run the full example app:
-```
-cd example
-mv lib/main.dart tmp && mv lib/main.dart.bk lib/main.dart && mv tmp lib/main.dart.bk
-flutter clean
-flutter run
-```
-Using built-in float action buttons to change value and see the effect
 
 ### Getting Started
 
@@ -49,23 +14,17 @@ import 'package:flutter_animation_progress_bar/flutter_animation_progress_bar.da
 
 Basic implementation can be done like below code:
 ```dart
-import 'package:flutter/widgets.dart';
-import 'package:flutter_animation_progress_bar/flutter_animation_progress_bar.dart';
-
 void main() {
   runApp(
     Center(
-        child: FAProgressBar(
+        child: ProgressBar(
+      showProgressCount: true,
       currentValue: 80,
       displayText: '%',
     )),
   );
 }
 ```
-
-### Example App
-You can find more examples from [Example App](example)
-
 
 ### API
 In this table, you can find all attributes provided by this package:
@@ -86,10 +45,11 @@ In this table, you can find all attributes provided by this package:
 | changeProgressColor | const Color(0xFF5F4B8B)           | Color that progressing color will be changed to, whenever **currentValue** greater than **changeColorValue** |
 | displayText         | ```null```                        | Text to display belonging with currentValue. <br>Examples:<br> ```%``` -> ```20%```<br> ```°F``` -> ```80°F```|
 | displayTextStyle    | ...                               | TextStyle of displayText|
+| showProgressCount   | default to `false`                | Hides the progress count|
 
 ### Objects
 ```dart
-class FAProgressBar {
+class ProgressBar {
 
   final int currentValue;
   final int maxValue;
@@ -105,12 +65,11 @@ class FAProgressBar {
   final Color changeProgressColor;
   final String displayText;
   final TextStyle displayTextStyle;
+  final bool showProgressCount;
 }
  ```
 
 
 ### Feedback
 
-Feel free to [leave any feedback](https://github.com/ltdangkhoa/Flutter-Animation-Progress-Bar/issues) for helping support this package 🍻 
-
-[![Buy Me A Coffee](https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/custom_images/orange_img.png "Buy Me A Coffee")](https://www.buymeacoffee.com/13f742 "Buy Me A Coffee")
+[![Buy ltdangkhoa A Coffee](https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/custom_images/orange_img.png "Buy Me A Coffee")](https://www.buymeacoffee.com/13f742 "Buy Me A Coffee")
